@@ -1,6 +1,6 @@
 # AquaBit
 
-Aquabit is a pixel-like aquarium simuluaton game
+Aquabit is a pixel-like aquarium simulation game
 
 ## Description
 
