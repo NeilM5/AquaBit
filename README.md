@@ -54,7 +54,7 @@ python AquaBit.py
      - Initial Release
     
 ## License
-This game is licensed under the MIT License - see the LICENSE.md file for details
+This game is licensed under the GPL-3.0 License - see the LICENSE.md file for details
 
 ## Acknowledgements
 
