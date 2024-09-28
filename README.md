@@ -11,21 +11,15 @@ you can add fishes of different colors, food pellets for each of them, seaweed-l
 This game was made in Visual Studio Code using Python. It uses Pygame, Random, and OS Libraries.
 
 ## Installation & Running
-1. **Clone Repository:** Open your terminal and run the following command to clone the repository.
-```bash
-git clone https://github.com/NeilM5/AquaBit
-```
+1. **Download the Source:** Go to the "Releases" section and download the source zip folder from the latest update.
 
-2. **Navigate to Project Directory:**
-```bash
-cd C:\Users\username\Documents\AquaBit
-```
+2. **Unzip Folder:** Extract the zip folder to your preffered location.
 
-3. **Install Dependencies:** Make sure to have Python and pip installed. Then install Pygame.       
+3. **Install Dependencies:** Make sure to have Python and pip installed. Then install Pygame by running:     
  ```bash
  pip install pygame
  ```
-4. **Run The Game:**
+4. **Run the Game:** Either open the .py file by double clicking on it or run this in the terminal:
 ```bash
 python AquaBit.py
 ```
