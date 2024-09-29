@@ -4,7 +4,7 @@ import os
 
 pg.init()
 
-display = pg.display.set_mode((1030, 500))
+display = pg.display.set_mode((980, 500))
 pg.display.set_caption("AquaBit")
 
 display_color = (162, 217, 206)
@@ -13,7 +13,7 @@ predator_color = (200, 89, 89)
 plant_colors = [(128, 209, 118), (110, 179, 101), (91, 149, 84)]
 food_color = (172, 114, 77)
 
-font = pg.font.SysFont("courier new", 16)
+font = pg.font.SysFont("comic sans ms", 16)
 
 class Fish():
     def __init__(self, grid, dw, dh, color):
@@ -72,7 +72,7 @@ class Fish():
     def gethunger(self, hunger):
         self.hunger += hunger
         return self.hunger
-    
+
 class Predator():
     def __init__(self, grid, dw, dh):
         super().__init__()
@@ -226,7 +226,7 @@ def collider():
 
                 break
 
-    
+
 
 def fishtofood():
     if len(foods) > 0:
@@ -333,17 +333,19 @@ while run:
     for predator in predators:
         predator.move()
         predator.draw(display)
+    
+    pg.draw.rect(display, (118, 172, 209), (800, 0, 180, 500))
 
-    fishcount_txt = font.render("Fishes:        " + str(len(fishes)) + "/50", False, (0, 0, 0))
+    fishcount_txt = font.render("Fishes:          " + str(len(fishes)) + "/50", True, (0, 0, 0))
     display.blit(fishcount_txt, (815, 20))
 
-    predcount_txt = font.render("Predators:     " + str(len(predators)) + "/5", False, (0, 0, 0))
+    predcount_txt = font.render("Predators:     " + str(len(predators)) + "/5", True, (0, 0, 0))
     display.blit(predcount_txt, (815, 40))
 
-    foodcount_txt = font.render("Food Pellets:  " + str(len(foods)) + "/20", False, (0, 0, 0))
+    foodcount_txt = font.render("Food Pellets:  " + str(len(foods)) + "/20", True, (0, 0, 0))
     display.blit(foodcount_txt, (815, 60))
 
-    plantcount_txt = font.render("Plants:        " + str(len(plants)) + "/20", False, (0, 0, 0))
+    plantcount_txt = font.render("Plants:           " + str(len(plants)) + "/20", True, (0, 0, 0))
     display.blit(plantcount_txt, (815, 80))
 
     screenshot_taken_txt = font.render("Screenshot Saved!", False, (0, 0, 0))
@@ -351,8 +353,6 @@ while run:
         display.blit(screenshot_taken_txt, (815, 100))
         spress = False
         tick.tick(2)
-
-    pg.draw.line(display, (0, 0, 0), (800, 0), (800, 500), 2)
 
     pg.display.flip()
     tick.tick(8)
