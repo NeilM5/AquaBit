@@ -43,7 +43,7 @@ python AquaBit.py
    - Plants (3 colors) grow upwards in random up, right, and left directions
    - Predators move randomly, and move towards Fish (hunger limit of 5 Fishes per Predator) (Predator dies at 5th Fish eaten)
 
-## Snipets
+## Snippets
 
 <img width="734" alt="aquabit_snipet" src="https://github.com/user-attachments/assets/dfc0735e-e4b1-45b8-944e-c9229bdd5e39">
 <br></br>
