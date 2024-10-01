@@ -52,7 +52,7 @@ python AquaBit.py
 
 
 ## Version
-Latest: v1.1.0
+Latest: v1.2.0
    - See [Release History](https://github.com/NeilM5/AquaBit/releases) 
     
 ## License
