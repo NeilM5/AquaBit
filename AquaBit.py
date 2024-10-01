@@ -4,7 +4,7 @@ import os
 
 pg.init()
 
-display = pg.display.set_mode((980, 500))
+display = pg.display.set_mode((990, 500))
 pg.display.set_caption("AquaBit")
 
 display_color = (162, 217, 206)
@@ -295,7 +295,7 @@ while run:
                 d = pg.key.get_pressed()
                 if d[pg.K_d]:
                     fishes.clear()
-                
+
             if event.key == pg.K_x:
                 d = pg.key.get_pressed()
                 if d[pg.K_d]:
@@ -334,7 +334,7 @@ while run:
         predator.move()
         predator.draw(display)
     
-    pg.draw.rect(display, (118, 172, 209), (800, 0, 180, 500))
+    pg.draw.rect(display, (118, 172, 209), (800, 0, 190, 500))
 
     fishcount_txt = font.render("Fishes:          " + str(len(fishes)) + "/50", True, (0, 0, 0))
     display.blit(fishcount_txt, (815, 20))
@@ -353,6 +353,14 @@ while run:
         display.blit(screenshot_taken_txt, (815, 100))
         spress = False
         tick.tick(2)
+
+    display.blit(font.render("Hold D & Press:", True, (0, 0, 0)), (815, 140))
+    dkey = pg.key.get_pressed()
+    if dkey[pg.K_d]:
+        display.blit(font.render("Z - Kill All Fish", True, (0, 0, 0)), (815, 165))
+        display.blit(font.render("X - Kill All Predators", True, (0, 0, 0)), (815, 185))
+        display.blit(font.render("C - Remove All Pellets", True, (0, 0, 0)), (815, 205))
+        display.blit(font.render("V - Kill All Plants", True, (0, 0, 0)), (815, 225))
 
     pg.display.flip()
     tick.tick(8)
